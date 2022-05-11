@@ -1,0 +1,69 @@
+.toolbar{
+    justify-content: center;
+    .contenedorLogo{
+        margin-top: 1%;
+        margin-bottom: 1%;
+        width: 125px; 
+        .styleLogo{
+            width: 70%;
+        }
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        padding-left: 0%;
+        width: 55%; 
+        justify-content: center;  
+        li{ 
+            color: #6b6c6f;         
+            list-style: none;
+            width: 200px;
+        }
+        .columnUl{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .nav{ 
+        li{
+            a {
+        background-color:rgb(255, 255, 255);
+        border-radius: 5px;
+        text-decoration:none;
+        padding:10px 12px;
+        display:block;
+        }
+        a:hover {
+            background-color:#eeeeee;
+            
+        }
+        ul{
+            display:none;
+            position:absolute;
+            min-width:140px; 
+            li{
+                position:relative;
+            }
+            ul{
+                top: 5px;
+                left: 200px;
+            }
+            
+        }
+    }
+    li:hover > ul {
+        display:block;
+    }  
+}
+    
+    button{
+        background-color: #ea5127;
+        color: white;
+        @extend.contenedorLogo
+        
+    }
+    .spaceBtn{
+        margin-right: 10px
+    }
+}
+
