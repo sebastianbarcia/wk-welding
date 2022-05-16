@@ -1,0 +1,15 @@
+.content-series{
+    margin-top: 2rem; 
+    h2{
+        margin-left: 8%;
+    }
+    .content-container-cards{
+        display: flex;
+        justify-content: center;
+       
+        .cards-margin{
+            display: flex;
+            justify-content: center;            
+        }
+    }
+}

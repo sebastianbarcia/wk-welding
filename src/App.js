@@ -1,25 +1,24 @@
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
+import CardSecuency from './components/carditemlist/carditems';
+import FooterNav from './components/footer/footer';
 
 function App() {
-  let test = "Soldadoras"
   return (
-    <div>
+    <>
       <header className='App'> 
         <NavBar/> 
       </header>
-      <main>
-      <h1>WK Welding {test}</h1>
-        <p>
-          Empresa dedicada a la soldadoras
-        </p>      
+      <main>      
+           <div>   
+              <CardSecuency titleSubSection="Productos recomendados"/>
+              <CardSecuency titleSubSection="Productos más vendidos"/>
+          </div>
       </main> 
       <footer>
-        
-      </footer>   
-       
-      
-    </div>
+        <FooterNav/>
+      </footer>         
+    </>
   );
 }
 

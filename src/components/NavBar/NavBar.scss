@@ -1,69 +1,109 @@
 .toolbar{
-    justify-content: center;
-    .contenedorLogo{
-        margin-top: 1%;
-        margin-bottom: 1%;
-        width: 125px; 
-        .styleLogo{
-            width: 70%;
+    .pos-logo{
+        display: flex;
+        align-items: center;
+        
+        .contenedorLogo{      
+            .styleLogo{            
+                width: 30%;
+                z-index: 99;
+            }
         }
     }
     ul{
         display: flex;
-        flex-direction: row;
+        
+        justify-content: right;
         padding-left: 0%;
-        width: 55%; 
-        justify-content: center;  
+        top: 100%;
+  
         li{ 
             color: #6b6c6f;         
             list-style: none;
-            width: 200px;
+            padding: 0rem 2rem;
+            z-index: 99;
         }
         .columnUl{
             display: flex;
             flex-direction: column;
+            background-color: #ebebeb;
         }
+        
     }
     .nav{ 
+        margin-block-start: 0em;
+        margin-block-end: 0em;
         li{
+            padding-top: 1rem;
+            padding-bottom: 1rem;    
             a {
-        background-color:rgb(255, 255, 255);
         border-radius: 5px;
         text-decoration:none;
-        padding:10px 12px;
+        padding: 0.5rem 1rem;        
         display:block;
         }
-        a:hover {
-            background-color:#eeeeee;
-            
-        }
+       
         ul{
             display:none;
             position:absolute;
             min-width:140px; 
+            
+            
             li{
-                position:relative;
+                position:relative; 
+                
+            }
+            
+            li:hover{
+                background-color: #ea5127;
+                color: white; 
+                            
             }
             ul{
-                top: 5px;
-                left: 200px;
+                background-color: #ebebeb;
+                top: 0%;
+                left: 302px;
             }
             
         }
     }
     li:hover > ul {
         display:block;
+        transition: all 5s;
     }  
 }
-    
+    .org-btn{
+        display: flex;
+        align-items: center;
+    }
     button{
         background-color: #ea5127;
         color: white;
+        z-index: 99;
+        padding: 0.5rem  1.5rem;
         @extend.contenedorLogo
         
     }
     .spaceBtn{
         margin-right: 10px
+        
     }
 }
+.center-navBar{
+    padding-right: 5%;
+}
 
+@media (max-width: 900px) {
+    .toolbar{
+        padding: 1rem 0rem;
+        .org-btn{
+            justify-content: center;
+        }
+        .center-navBar{
+            padding-right: 0%;
+            .nav{
+            justify-content: center;
+            }
+        }    
+    }
+}
