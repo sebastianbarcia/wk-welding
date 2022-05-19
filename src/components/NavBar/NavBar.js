@@ -1,7 +1,7 @@
 import './NavBar.scss';
-import { Container, Grid, AppBar, Toolbar, Button } from '@mui/material';
+import { Container, Grid, AppBar, Toolbar } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Cart from '../cart/Cart';
 
 const themeWK = createTheme({
     palette:{
@@ -56,10 +56,8 @@ const NavBar = () =>{
                                     <li><a>Contacto</a></li>                
                                 </ul>
                             </Grid>
-                            <Grid item md={2} xs={12} className="org-btn">
-                                <Button>
-                                    <ShoppingCartOutlinedIcon className='spaceBtn'></ShoppingCartOutlinedIcon>Carrito
-                                </Button>                                
+                            <Grid item md={2} xs={12} className="org-btn">                                
+                                <Cart/>                             
                             </Grid>
                         </Grid>
                     </Container>

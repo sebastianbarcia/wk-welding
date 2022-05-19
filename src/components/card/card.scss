@@ -11,3 +11,20 @@
     justify-content: space-between;
     align-items: center;
 }
+.btn-quantity{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.6rem;
+    #bt--quantity{
+        color: black;
+        background-color: #ebebeb; 
+        border-radius: 100px;
+        min-width: 34px;
+    }
+    span{
+        margin: 0.3rem;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+    }
+}

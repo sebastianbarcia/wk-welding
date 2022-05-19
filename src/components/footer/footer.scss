@@ -11,7 +11,11 @@
             padding-left: 0rem;
             li{
                 list-style: none;
-                line-height: 2rem;
+                line-height: 3rem;
+                a{
+                    text-decoration:none;
+                    color: black;
+                }
             }
         }
     }

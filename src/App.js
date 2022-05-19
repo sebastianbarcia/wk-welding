@@ -1,7 +1,7 @@
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
-import CardSecuency from './components/carditemlist/carditems';
-import FooterNav from './components/footer/footer';
+import CardSecuency from './components/carditemlist/CardItemsList';
+import FooterNav from './components/footer/Footer';
 
 function App() {
   return (

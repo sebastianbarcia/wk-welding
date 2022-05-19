@@ -1,12 +1,8 @@
-import { Button , Typography, CardActionArea } from "@mui/material"
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-
-import './card.scss'
+import { Typography, CardActionArea, Card, CardContent, CardMedia } from "@mui/material"
+import ItemCount from '../itemCount/ItemCount';
+import './Card.scss'
 
 const CardItem = ({image,title,price}) => {
-  
     return(        
         <Card sx={{ maxWidth: 300}}>
         <CardActionArea>
@@ -22,12 +18,12 @@ const CardItem = ({image,title,price}) => {
                 <Typography gutterBottom variant="h6" component="div">
                 {title}
                 </Typography>
-                <Typography variant="subtitle1" color="text.secondary">
+                <Typography variant={"subtitle1"} color="text.secondary">
                 {price}
                 </Typography>
-            </div>
+            </div>            
             <div>
-                <Button variant="contained" id= "colorBtnAddToCart">Add to cart</Button>
+              <ItemCount stock="5"/>
             </div>
           </CardContent>
         </CardActionArea>
