@@ -3,10 +3,10 @@ import '../footer/Footer.scss'
 import ContactForm from '../inputsForm/ContactForm'
 
 const footer = [
-{"title": "Productos", "link" : "#"}, 
-{"title": "Nosotros", "link" : "#"}, 
-{"title":  "Telefono", "link" : "#" }, 
-{"title": "wkwelding@wkwelding.es" , "link" : "https://outlook.live.com/owa/"}]
+{"title": "Productos", "link" : "#", "id":1}, 
+{"title": "Nosotros", "link" : "#" , "id":2}, 
+{"title":  "Telefono", "link" : "#", "id":3}, 
+{"title": "wkwelding@wkwelding.es" , "link" : "https://outlook.live.com/owa/", "id": 4 }]
 
 const FooterNav = () =>{
     return(    
@@ -16,7 +16,7 @@ const FooterNav = () =>{
                     <ul>
                         {footer.map((navFooter) =>{ 
                             return(
-                        <li><a href={navFooter.link}>{navFooter.title}</a></li>
+                        <li key={navFooter.id}><a href={navFooter.link}>{navFooter.title}</a></li>
                             )
                         })
                         }

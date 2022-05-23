@@ -2,6 +2,7 @@ import './NavBar.scss';
 import { Container, Grid, AppBar, Toolbar } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Cart from '../cart/Cart';
+import { navBarOptions } from '../navBarOptions';
 
 const themeWK = createTheme({
     palette:{
@@ -13,6 +14,7 @@ const themeWK = createTheme({
         }
     }
 })
+
 
 const NavBar = () =>{
    return(
@@ -31,25 +33,19 @@ const NavBar = () =>{
                                 <ul className='nav'>
                                     <li><a>Productos</a>
                                         <ul className='columnUl'>
-                                            <li><a>Equipos de soldadura y corte</a>
-                                                <ul>
-                                                    <li><a>MMA</a></li>
-                                                    <li><a>TIG</a></li>
-                                                    <li><a>MIG-MAG</a></li>
-                                                    <li><a>Arco sumergido</a></li>
-                                                    <li><a>Equipos de plasma</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a>Antorchas</a>
-                                                <ul>
-                                                    <li><a>TIG</a></li>
-                                                    <li><a>MIG-MAG</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a>Automatización</a></li>
-                                            <li><a>Equipo de protección</a></li>
-                                            <li><a>Consumibles de soldadura</a></li>
-                                            <li><a>Respaldo ceramico</a></li>
+                                       {navBarOptions.map((optionProducts) => {
+                                                                                                
+                                            return(
+                                                <>
+                                                    <li><a>{optionProducts.category}</a>                                            
+                                                        <ul>
+                                                            <li><a>{optionProducts.products}</a></li>                                                        
+                                                        </ul>
+                                                    </li>                                                
+                                                </>
+                                                )
+                                            })} 
+                                           
                                         </ul>
                                     </li>
                                     <li><a>Nosotros</a></li>

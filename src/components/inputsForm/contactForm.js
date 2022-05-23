@@ -4,8 +4,8 @@ import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 
 const formsContact = [
-    {"label":"Nombre", "type":"text"},
-    {"label":"Mail", "type":"email"},
+    {"label":"Nombre", "type":"text", "id":1 },
+    {"label":"Mail", "type":"email", "id":2 },
 ]
 
 const ContactForm = () =>{
@@ -13,7 +13,7 @@ const ContactForm = () =>{
         <Box component="form" sx={{'& > :not(style)': { m: 1, width: '100%' },}} noValidate autoComplete="off">
             {formsContact.map((forms) =>{
                 return(
-            <TextField id="outlined-basic" className='color-form' label={forms.label} variant={"outlined"} type={forms.type} />
+            <TextField id="outlined-basic" className='color-form' label={forms.label} variant={"outlined"} type={forms.type} key={forms.id} />
                 )
             })
             }            

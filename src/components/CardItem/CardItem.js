@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { useState } from "react";
 
-const ItemCount = ({stock}) =>{
+const ItemCard = ({stock , title}) =>{
     const [count, setCount] = useState(1)
    
     const addToCart = () => {
@@ -15,7 +15,7 @@ const ItemCount = ({stock}) =>{
         }
     }
     const onAddToCart = () => {
-        console.log(count)
+        console.log(`Haz agregado ${count} unidades del producto ${title} quedan en stock ${stock - count}`)
     }
 
     return(
@@ -33,4 +33,4 @@ const ItemCount = ({stock}) =>{
 
 }
 
-export default ItemCount
+export default ItemCard

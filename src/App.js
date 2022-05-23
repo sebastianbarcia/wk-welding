@@ -1,6 +1,6 @@
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
-import CardSecuency from './components/carditemlist/CardItemsList';
+import CardContainer from './components/CardContainer/CardContainer';
 import FooterNav from './components/footer/Footer';
 
 function App() {
@@ -11,8 +11,7 @@ function App() {
       </header>
       <main>      
            <div>   
-              <CardSecuency titleSubSection="Productos recomendados"/>
-              <CardSecuency titleSubSection="Productos más vendidos"/>
+            <CardContainer/>
           </div>
       </main> 
       <footer>

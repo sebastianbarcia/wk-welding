@@ -1,8 +1,8 @@
 import { Typography, CardActionArea, Card, CardContent, CardMedia } from "@mui/material"
-import ItemCount from '../itemCount/ItemCount';
-import './Card.scss'
+import CardItem from '../CardItem/CardItem';
+import './CardItemList.scss'
 
-const CardItem = ({image,title,price}) => {
+const CardItemList = ({image,title,price, stock}) => {
     return(        
         <Card sx={{ maxWidth: 300}}>
         <CardActionArea>
@@ -23,7 +23,7 @@ const CardItem = ({image,title,price}) => {
                 </Typography>
             </div>            
             <div>
-              <ItemCount stock="5"/>
+              <CardItem stock={stock} title={title}/>
             </div>
           </CardContent>
         </CardActionArea>
@@ -31,4 +31,4 @@ const CardItem = ({image,title,price}) => {
     )
 }
 
-export default CardItem
+export default CardItemList
