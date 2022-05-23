@@ -45,7 +45,26 @@ const NavBar = () =>{
                                                 </>
                                                 )
                                             })} 
-                                           
+{/*                                             
+                                            <li><a>Equipos de soldadura y corte</a>
+                                                <ul>
+                                                    <li><a>MMA</a></li>
+                                                    <li><a>TIG</a></li>
+                                                    <li><a>MIG-MAG</a></li>
+                                                    <li><a>Arco sumergido</a></li>
+                                                    <li><a>Equipos de plasma</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a>Antorchas</a>
+                                                <ul>
+                                                    <li><a>TIG</a></li>
+                                                    <li><a>MIG-MAG</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a>Automatización</a></li>
+                                            <li><a>Equipo de protección</a></li>
+                                            <li><a>Consumibles de soldadura</a></li>
+                                            <li><a>Respaldo ceramico</a></li> */}
                                         </ul>
                                     </li>
                                     <li><a>Nosotros</a></li>
