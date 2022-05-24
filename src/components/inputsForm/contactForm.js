@@ -1,4 +1,3 @@
-import '../inputsForm/contactsForm.scss'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
@@ -18,7 +17,7 @@ const ContactsForms = () => {
                 )
             })
             }            
-            <TextField id="outlined-basic" color="warning"  multiline rows={4} className='color-form' label={"Mensaje"} variant={"outlined"} type= {"text"}/>
+            <TextField id="outlined-basic" color="warning" multiline rows={4} className='color-form' label={"Mensaje"} variant={"outlined"} type= {"text"}/>
             <div>
                 <Button variant="contained" id = "colorBtnAddToCart" type='submit'>Enviar</Button>
             </div>
