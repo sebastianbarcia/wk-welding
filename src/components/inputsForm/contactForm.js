@@ -3,8 +3,6 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
 
-
-
 const formsContact = [
     {"label":"Nombre", "type":"text", "id":1 },
     {"label":"Mail", "type":"email", "id":2 },

@@ -1,8 +1,7 @@
 import { Container,Grid } from '@mui/material'
-
 import '../footer/footer.scss'
-
 import ContactsForms from '../inputsForm/contactForm.js'
+
 const footer = [
 {"title": "Productos", "link" : "#", "id":1}, 
 {"title": "Nosotros", "link" : "#" , "id":2}, 
