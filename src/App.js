@@ -1,7 +1,7 @@
 import './App.scss';
 import NavBar from './components/NavBar/NavBar';
 import CardContainer from './components/CardContainer/CardContainer';
-import FooterNav from './components/footer/Footer';
+import FooterNav from './components/footer/footer';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <FooterNav/>
       </footer>         
     </>
-  );
+  )
 }
 
 export default App;

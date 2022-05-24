@@ -1,7 +1,8 @@
 import { Container,Grid } from '@mui/material'
-import '../footer/Footer.scss'
-import ContactForm from '../inputsForm/ContactForm'
 
+import '../footer/footer.scss'
+
+import ContactsForms from '../inputsForm/contactForm.js'
 const footer = [
 {"title": "Productos", "link" : "#", "id":1}, 
 {"title": "Nosotros", "link" : "#" , "id":2}, 
@@ -23,7 +24,7 @@ const FooterNav = () =>{
                     </ul>
                 </Grid>        
                 <Grid item md={6} xs={12}>
-                    <ContactForm/>
+                    <ContactsForms/>
                 </Grid>
             </Grid>
         </Container>   
