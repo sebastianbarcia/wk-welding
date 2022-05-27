@@ -1,0 +1,25 @@
+.single-product{
+    
+    img{
+        width: 95%;
+    }
+    .img-secondary{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2.5rem;
+        img{
+            margin: 0.5rem;
+            width: 6rem;
+            border-radius: 5px;
+            border: 1px solid black;
+        }     
+    }    
+}
+.item-card-margin{
+    margin-top: 2rem;
+    margin-left: 0px;
+}
+.category-item{
+    margin-left: 7.6%;
+}

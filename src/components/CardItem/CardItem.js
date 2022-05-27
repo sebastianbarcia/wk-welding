@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import { useState } from "react";
 
 const ItemCard = ({stock , title}) =>{
+    
     const [prev, setCount] = useState(1)
    
     const addToCart = () => {
@@ -26,7 +27,7 @@ const ItemCard = ({stock , title}) =>{
                 <Button id="bt--quantity" size="small" onClick={addToCart}> + </Button>
             </div>
             <div>
-                <Button variant={"contained"} fullWidth id="colorBtnAddToCart" onClick={onAddToCart} >Add to cart</Button>
+                <Button variant={"contained"} fullWidth id="colorBtnAddToCart" onClick={onAddToCart}>Add to cart</Button>
             </div>
         </>
             )

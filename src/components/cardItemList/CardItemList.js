@@ -1,6 +1,7 @@
-import { Typography, CardActionArea, Card, CardContent, CardMedia } from "@mui/material"
+import { Typography, CardActionArea, Card, CardContent, CardMedia, Grid } from "@mui/material"
 import CardItem from '../CardItem/CardItem';
 import './CardItemList.scss'
+import Colors from "../colors/colors";
 
 const CardItemList = ({image,title,price, stock}) => {
     return(        
@@ -13,6 +14,9 @@ const CardItemList = ({image,title,price, stock}) => {
             image={`/card/${image}`}
             alt="swk 200"
           />
+          <Grid maxWidth="sx" className="justify-content-center">
+          <Colors/>
+          </Grid>
           <CardContent className="area-grid">
             <div>
                 <Typography gutterBottom variant="h6" component="div">
@@ -25,6 +29,7 @@ const CardItemList = ({image,title,price, stock}) => {
             <div>
               <CardItem stock={stock} title={title}/>
             </div>
+            
           </CardContent>
         </CardActionArea>
       </Card>

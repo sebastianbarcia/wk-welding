@@ -1,10 +1,10 @@
-import welderProducts from '../../helpers'
+import welderProducts from '../../utils/welderProducts'
 import { useState , useEffect } from 'react'
 import CardItemsListContainer from '../carditemListContainer/CardItemsListContainer'
 
 const CardContainer = () => {
 
-const [welder, setSoldadoras] = useState([]) 
+const [welder, setWelders] = useState([]) 
     const getProducts = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -13,12 +13,12 @@ const [welder, setSoldadoras] = useState([])
         })
     }
 
-    useEffect ( () => {
+    useEffect (() => {
 
         getProducts()
 
         .then((response) => {      
-            setSoldadoras(response)
+            setWelders(response)
         })
         .catch((error) =>{
             console.log("Error: fallo la llamada")
