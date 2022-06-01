@@ -29,7 +29,22 @@
     }
 }
 .justify-content-center{
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+   visibility: hidden;
+   a{
+       text-decoration: none;
+       color: #de4d25;
+   }
 }
+
+.visible:hover{
+    .justify-content-center{
+        visibility: visible;
+    }
+}
+
+@media (max-width: 900px) {
+    .justify-content-center{
+        visibility: visible;
+        background-color: #e1cfca92;
+    }
+  }

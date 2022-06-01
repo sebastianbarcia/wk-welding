@@ -4,6 +4,7 @@ import ItemCard from '../CardItem/CardItem'
 import Colors from '../colors/colors'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'; 
+
 const ItemDetail = ({product}) => {
     
     return(
@@ -33,7 +34,9 @@ const ItemDetail = ({product}) => {
                         <p>{product.description}</p> 
                         <h2> {`€ ${product.price}`}</h2>                        
                         <Colors />   
-                        <div className='item-card-margin'><ItemCard stock={product.stock} title={product.title}/> </div>                                                                                    
+                        <div className='item-card-margin'>
+                            <ItemCard stock={product.stock} title={product.title}/> 
+                        </div>                                                                                    
                     </Grid>
                 </Grid>
             </Container>         

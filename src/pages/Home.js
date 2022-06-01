@@ -1,10 +1,9 @@
-import welderProducts from '../../utils/welderProducts'
-import { useState , useEffect } from 'react'
-import CardItemsListContainer from '../carditemListContainer/CardItemsListContainer'
+import CardItemsListContainer from '../components/carditemListContainer/CardItemsListContainer';
+import welderProducts from '../utils/welderProducts';
+import { useState, useEffect } from 'react';
 
-const CardContainer = () => {
-
-const [welder, setWelders] = useState([]) 
+const Home = () => {
+    const [itemProduct, setWelders] = useState([]) 
     const getProducts = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -14,7 +13,7 @@ const [welder, setWelders] = useState([])
     }
 
     useEffect (() => {
-
+        
         getProducts()
 
         .then((response) => {      
@@ -27,14 +26,12 @@ const [welder, setWelders] = useState([])
             console.log("se termino la llamada")
         })
     }, [])
-
-
     return(
         <>
-            <CardItemsListContainer titleSubSection="Productos recomendados" welder = {welder} />
-            <CardItemsListContainer titleSubSection="Productos más vendidos" welder = {welder}/>
+            <CardItemsListContainer titleSubSection="Productos recomendados" products={itemProduct}/>
+            <CardItemsListContainer titleSubSection="Productos más vendidos" products={itemProduct}/>
         </>
     )
 }
 
-export default CardContainer
+export default Home

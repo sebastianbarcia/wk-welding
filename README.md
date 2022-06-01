@@ -1,6 +1,29 @@
-# Getting Started with Create React App
+# WK-WELDING
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It is a company of supplies for welding.
+
+# Funcionality
+
+The project was born in order to make a shopping cart for WK Welding products.
+
+# About this project
+
+The project is currently being worked on and will end on July 1, 2022.
+
+# Tools UI
+
+Components, icons, styles, and layout grids of "Material UI" taken from
+https://mui.com/
+
+## Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/sebastianbarcia/wk-welding.git).
+Is open source code for modify to improve the proyect
+
+## Install
+
+You can Install de repository from here: 
+`https://github.com/sebastianbarcia/wk-welding.git`
 
 ## Available Scripts
 
@@ -68,3 +91,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### `Push to github repository `
+git add all / git add .
+git commit -m "Nuevo mensaje"
+git push https://github.com/sebastianbarcia/wk-welding.git

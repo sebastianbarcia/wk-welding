@@ -4,7 +4,6 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 
-
 const Colors = () => {  
 
     const torchElectionYes = () =>{
@@ -14,7 +13,6 @@ const Colors = () => {
         console.log("Sin Antorcha")
     }
 
-
     return(
         <>
        <FormControl >      
@@ -22,12 +20,11 @@ const Colors = () => {
                 row
                 aria-labelledby="demo-row-radio-buttons-group-label"
                 name="row-radio-buttons-group"
-                defaultValue="top"
-                >
-                <FormControlLabel  id='colors-margin' className='' value="with" 
-          labelPlacement="bottom" control={<Radio color="default" />} label="Con antorcha" onClick={torchElectionYes} />
-                <FormControlLabel id='colors-margin'  value="without" 
-          labelPlacement="bottom" control={<Radio color="default" />}label="Sin antorcha" onClick={torchElectionNo}/>
+                defaultValue="top">
+                <FormControlLabel id='colors-margin' value="with" 
+                labelPlacement="bottom" control={<Radio color="default" />} label="Con antorcha" onClick={torchElectionYes} />
+                <FormControlLabel id='colors-margin' value="without" 
+                labelPlacement="bottom" control={<Radio color="default" />}label="Sin antorcha" onClick={torchElectionNo}/>
             </RadioGroup>
         </FormControl>
         </>

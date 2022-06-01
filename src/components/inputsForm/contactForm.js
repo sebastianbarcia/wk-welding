@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material';
+import "../inputsForm/ContactsForm.scss"
 
 const formsContact = [
     {"label":"Nombre", "type":"text", "id":1 },
@@ -9,7 +10,7 @@ const formsContact = [
 
 const ContactsForms = () => {
     return(
-        <Box component="form" sx={{'& > :not(style)': { m: 1, width: '100%' },}} noValidate autoComplete="off">
+        <Box component="form" className='form-styles' noValidate autoComplete="off">
             {formsContact.map((forms) =>{
                 return(
             <TextField id="outlined-basic" className='color-form' color="warning"

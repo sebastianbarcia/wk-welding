@@ -1,11 +1,13 @@
-import { Typography, CardActionArea, Card, CardContent, CardMedia, Grid } from "@mui/material"
+import { Typography, CardActionArea, Card, CardContent, CardMedia, Grid, Button } from "@mui/material";
 import CardItem from '../CardItem/CardItem';
-import './CardItemList.scss'
-import Colors from "../colors/colors";
+import './CardItemList.scss';
+import { Link } from "react-router-dom";
 
-const CardItemList = ({image,title,price, stock}) => {
-    return(        
-        <Card sx={{ maxWidth: 300}}>
+const CardItemList = ({image,title,price, stock, id}) => {
+
+    return(   
+      <div className='visible'>     
+        <Card sx={{ maxWidth: 300}} >
         <CardActionArea>
           <CardMedia
             component="img"
@@ -15,7 +17,9 @@ const CardItemList = ({image,title,price, stock}) => {
             alt="swk 200"
           />
           <Grid maxWidth="sx" className="justify-content-center">
-          <Colors/>
+          <Button variant={"default"} fullWidth>
+            <Link to={`/product/${id}`}>Ver detalle</Link> 
+          </Button>
           </Grid>
           <CardContent className="area-grid">
             <div>
@@ -33,6 +37,7 @@ const CardItemList = ({image,title,price, stock}) => {
           </CardContent>
         </CardActionArea>
       </Card>
+      </div>
     )
 }
 
