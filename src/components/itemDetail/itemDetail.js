@@ -1,12 +1,20 @@
 import  '../itemDetail/itemDetail.scss'
 import { Button, Container , Grid } from '@mui/material'
-import ItemCard from '../CardItem/CardItem'
+import ItemCount  from '../ItemCount/ItemCount'
 import Colors from '../colors/colors'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'; 
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const ItemDetail = ({product}) => {
-    
+    const [showButton, setShowButton] = useState(false)
+    const [quantity, setQuantity] = useState(1)
+    const addToProductToCart = () =>{
+        console.log("producto agregado al carrito", product)
+        console.log("cantidad añadida", quantity ) 
+    }
+
     return(
         <>
             <Container maxWidth="xl" className="single-product"> 
@@ -25,8 +33,7 @@ const ItemDetail = ({product}) => {
                                 <img src={product.image}></img> 
                             <Button> 
                             <ArrowForwardIosIcon color='warning'/> 
-                            </Button>
-                           
+                            </Button>                           
                         </div>                  
                     </Grid>
                     <Grid item lg={6}  md={7}>     
@@ -35,8 +42,12 @@ const ItemDetail = ({product}) => {
                         <h2> {`€ ${product.price}`}</h2>                        
                         <Colors />   
                         <div className='item-card-margin'>
-                            <ItemCard stock={product.stock} title={product.title}/> 
-                        </div>                                                                                    
+                        {!showButton ?
+                            <ItemCount stock={product.stock} title={product.title} setShowButton={setShowButton} refreshQuantity = {setQuantity} quantity = {quantity} /> 
+                            : <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={addToProductToCart}><Link to="/cart" className='link-button-style'>Terminar compra</Link></Button> }
+                            
+                        </div> 
+                                                                                                          
                     </Grid>
                 </Grid>
             </Container>         

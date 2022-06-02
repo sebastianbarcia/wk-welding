@@ -17,29 +17,27 @@ const CategoryPage = () =>{
     
     useEffect (() => {
         setWelders([]);
-
         getProducts(welderProducts)
            
         .then((response) => {  
-               
-            // setWelders(response)
-            filterByCategory(response)
+            setWelders([]);
+            filterByCategory(response)           
         })
+
         .catch((error) =>{
             console.log("Error: fallo la llamada")
         })
+
         .finally(() =>{
             console.log("se termino la llamada")
         })
+
     }, [category])   
 
     const filterByCategory = (array) =>{
-        return array.filter( (item) =>{
-            if(item.category === category){
-                let itemsCategory = [];
-                itemsCategory.push(item);
-                console.log([...itemsCategory])
-                return setWelders([...itemsCategory, item])   
+        return array.map( (item) =>{
+            if(item.category === category){        
+             return setWelders(itemProduct => [...itemProduct, item]);   
             }
         })
     }

@@ -12,7 +12,7 @@ const CardItemsListContainer = ({titleSubSection, products}) => {
             </Grid>
             <Grid container columns={14} spacing={2} className='content-container-cards'>
             {products.map(({title, price, image, id , stock}) => {                
-                return(
+                return(                    
                 <Grid item xl={3} className='cards-margin' key={id} >
                     <CardItemList  title={title} price={`€ ${price}`} image={image} stock={stock} id={id} />
                 </Grid>

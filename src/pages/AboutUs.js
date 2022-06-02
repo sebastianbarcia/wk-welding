@@ -1,4 +1,5 @@
-import '../pages/AboutUs.scss'
+import '../pages/AboutUs.scss';
+import { Link } from 'react-router-dom';
 import { Button, Container, Grid } from '@mui/material';
 
 const AboutUs = () =>{
@@ -28,7 +29,7 @@ const AboutUs = () =>{
             <Grid className='about-us-contact'>
                 <h3> Descubra su nuevo apoyo en técnicas de soldadura.</h3>
                 <p>WKwelding cuenta con una red de distribución en constante crecimiento y altamente cualificada que le aportará un servicio técnico de primer nivel y le ayudará a resolver cualquier consulta que tenga en relación a nuestros productos.</p>
-                <Button variant="contained" id = "colorBtnAddToCart">Contactenos</Button>
+                <Button variant="contained" id = "colorBtnAddToCart"><Link to='/contact'>Contactenos</Link> </Button>
             </Grid>
         </Container>
     </>

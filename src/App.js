@@ -8,6 +8,7 @@ import  Contact from './pages/Contact';
 import Error404 from './pages/Error404';
 import AboutUs from './pages/AboutUs';
 import CategoryPage from './pages/CategoryPage';
+import AllProducts from './pages/AllProducts';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route exact path = '/contact' element ={<Contact/>}></Route>
           <Route exact path ='*' element={<Error404/>}></Route>
           <Route exact path = '/product/:id' element={<DetailsProduct/>} ></Route>
+          <Route exact path = '/product' element={<AllProducts/>} ></Route>
           <Route exact path='/category/:category' element={<CategoryPage/>}></Route>
          </Routes>      
       </main>            

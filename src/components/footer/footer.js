@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import '../footer/footer.scss'
 
 const footer = [
-{"title": "Productos", "link" : "/", "id":1}, 
+{"title": "Productos", "link" : "/product", "id":1}, 
 {"title": "Nosotros", "link" : "/us" , "id":2},
 {"title": "Contacto", "link" : "/contact" , "id":3}, 
 {"title": "Correo: wkwelding@wkwelding.es" , "link" : "https://outlook.live.com/owa/", "id": 4 },

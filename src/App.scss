@@ -9,3 +9,46 @@
 footer{
   background-color: blanchedalmond;
 }
+
+#colorBtnAddToCart{
+  a{
+    text-decoration: none;
+    color: white;
+  }
+}
+
+/*******Home*********/
+
+.justify-content-home{
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+  h3{
+    color: #ea5127
+  }
+  img{
+    border-radius: 10px;
+    width: 100%;
+  }
+  #outlined-color-bottom{
+    border-color: #ea5127;
+    margin-top: 1rem;
+    a{
+     color: #ea5127;
+     text-decoration: none;
+    }
+  }
+}
+.img-portada-home{
+  width: 100%;
+}
+
+@media (max-width: 900px){
+  #col-direction-home{
+    
+    flex-direction: column-reverse;
+  }
+
+}

@@ -41,6 +41,7 @@
         text-decoration:none;
         padding: 0.5rem 1rem;        
         display:block;
+        color: black
         }
        
         ul{
@@ -51,6 +52,9 @@
             
             li{
                 position:relative; 
+                a{
+                    color: black
+                }
                 
             }
             
