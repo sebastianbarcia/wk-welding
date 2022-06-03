@@ -14,13 +14,17 @@ const CategoryPage = () =>{
              }, )        
         })
     }
-    
+    //aca lo tuve que hacer dos veces
     useEffect (() => {
+        //*
         setWelders([]);
+        //*
         getProducts(welderProducts)
            
-        .then((response) => {  
+        .then((response) => {
+            //*  
             setWelders([]);
+            //*
             filterByCategory(response)           
         })
 

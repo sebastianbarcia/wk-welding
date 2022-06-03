@@ -3,6 +3,7 @@ import welderProducts from '../utils/welderProducts';
 import { useState, useEffect } from 'react';
 import { Container, Grid, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { homeText } from '../utils/helper';
 
 const Home = () => {
     const [itemProduct, setWelders] = useState([]) 
@@ -36,8 +37,14 @@ const Home = () => {
             <CardItemsListContainer titleSubSection="Productos recomendados" products={filterNovedad}  />
             <Grid container className='justify-content-home' id="col-direction-home" spacing={5} >
                 <Grid item md={5} xs={10}>
-                    <h3>LET THE WELD BEGIN</h3>
-                    <p>Los equipos de soldadura WKwelding están diseñados para ofrecer un manejo sencillo al soldador al tiempo que proporcionan una calidad de soldadura excelente gracias a su perfecta regulación y concentración de arco.</p>
+                    {homeText.map(({title , paragraph}) => {
+                        return(
+                        <>
+                            <h3>{title}</h3>
+                            <p>{paragraph}</p>
+                        </>
+                        )
+                    })}
                     <Button variant={"outlined"} id="outlined-color-bottom"><Link to={`/product`} >Ver nuestros productos</Link></Button>
                 </Grid>
                 <Grid item md={4.9} xs={10}>

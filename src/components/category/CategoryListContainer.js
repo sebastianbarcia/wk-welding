@@ -4,7 +4,6 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const CategoryListContainer = () => {
 const {category} = useParams();
-console.log(useParams())
 const navigate = useNavigate();
 
     const [prodCategory, setCategory] = useState({})
@@ -40,8 +39,6 @@ const navigate = useNavigate();
     }, [category])
 
     const productsCategory = welderProducts.filter((products) =>{
-        console.log(category)
-        console.log(products.category)
         return products.category == category;
     } )  
     console.log(productsCategory)
