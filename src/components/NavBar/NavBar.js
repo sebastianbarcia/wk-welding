@@ -1,7 +1,8 @@
 import './NavBar.scss';
 import { Container, Grid, AppBar, Toolbar } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Cart from '../cart/Cart';
+
+import CartWidget from '../cartWidget/cartWidget';
 import { Link } from 'react-router-dom';
 
 const themeWK = createTheme({
@@ -58,7 +59,7 @@ const NavBar = () =>{
                                 </ul>
                             </Grid>
                             <Grid item md={2} xs={12} className="org-btn">                                
-                                <Cart/>                             
+                                <CartWidget/>                             
                             </Grid>
                         </Grid>
                     </Container>

@@ -4,17 +4,22 @@ import { useState, useEffect } from 'react';
 import { Container, Grid, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { homeText } from '../utils/helper';
+import CircularProgress from '@mui/material/CircularProgress';
+import './home.scss'
 
 const Home = () => {
+    const [load, setLoad] = useState(false)
     const [itemProduct, setWelders] = useState([]) 
     const getProducts = () => {
         return new Promise((resolve, reject) => {
+            setLoad(true)
             setTimeout(() => {
+                setLoad(false);
                 resolve(welderProducts)
             }, 2000)        
         })
     }
-
+    
     const filterNovedad = itemProduct.filter(element => element.news === true)   
          
     useEffect (() => {
@@ -32,6 +37,17 @@ const Home = () => {
             console.log("se termino la llamada")
         })
     }, [])
+
+    if(load){
+        return (
+            <>
+            <div className='spinner-styles'>
+                <CircularProgress color="warning" /> 
+            </div>
+           
+            </>
+        )
+    }else{
     return(
         <>
             <CardItemsListContainer titleSubSection="Productos recomendados" products={filterNovedad}  />
@@ -55,5 +71,5 @@ const Home = () => {
         </>
     )
 }
-
+}
 export default Home

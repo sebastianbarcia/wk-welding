@@ -1,0 +1,48 @@
+.MuiMenu-list{
+    background-color:  rgb(239, 239, 239);
+.container-cart{
+    padding: 0.2rem 0.5rem;
+    .cartEmpty{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0rem;
+    }
+    
+.cart-div{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: .3rem 0rem;
+    .badge-cart-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1rem;
+        font-size: small;
+        width: max-content;
+        p{
+            font-weight: 800;
+        }
+        span{
+            margin-left: 1rem;
+            font-weight: 600;
+        }
+    }
+    .img-cart{        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        img{    
+            width: 7rem;
+        }   
+    }
+    .cart-delete{
+        @extend .img-cart;
+        padding-right: 1rem;
+        }
+    }
+}
+}

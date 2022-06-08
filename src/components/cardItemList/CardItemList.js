@@ -2,16 +2,19 @@ import { Typography, CardActionArea, Card, CardContent, CardMedia, Grid, Button 
 import ItemCount from '../ItemCount/ItemCount';
 import './CardItemList.scss';
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState , useContext } from "react";
+import CartContext from "../../context/CartContext";
 
 const CardItemList = ({image,title,price, stock, id}) => {
+  const { addProductToCart } = useContext(CartContext)
   const [showButton, setShowButton] = useState(false)
   const [quantity, setQuantity] = useState(1);
-  const addToProductToCart = () =>{
-        console.log("Haz agregado al carrito", quantity,  title, "quedan en stock", stock )
-        console.log("cantidad añadida",  ) 
-    }
   
+  // const addToProductToCart = () =>{
+  //       console.log("Haz agregado al carrito", quantity,  title, "quedan en stock", stock )
+  //       console.log("cantidad añadida",  ) 
+  //   }
+ 
     return(   
       <div className='visible'>     
         <Card sx={{ maxWidth: 300}} >
@@ -40,9 +43,8 @@ const CardItemList = ({image,title,price, stock, id}) => {
             <div>
             {!showButton ?
               <ItemCount quantity = {quantity} refreshQuantity = {setQuantity} setShowButton={setShowButton}  stock={stock} title={title}/>
-              : <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={addToProductToCart}><Link to="/cart">Terminar compra</Link></Button> }
-            </div>
-            
+              : <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={() => addProductToCart({ image, title, price, stock, id, quantity }) }>Terminar compra</Button> }
+            </div>            
           </CardContent>
         </CardActionArea>
       </Card>
