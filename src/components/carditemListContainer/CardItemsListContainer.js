@@ -14,7 +14,7 @@ const CardItemsListContainer = ({titleSubSection, products}) => {
             {products.map(({title, price, image, id , stock}) => {                
                 return(                    
                 <Grid item xl={3} className='cards-margin' key={id} >
-                    <CardItemList  title={title} price={`€ ${price}`} image={image} stock={stock} id={id} />
+                    <CardItemList  title={title} price={`${price}`} image={image} stock={stock} id={id} />
                 </Grid>
                     )
                 })   

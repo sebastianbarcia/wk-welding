@@ -4,6 +4,8 @@
 .App {
   text-align: center;
   font-family: 'Roboto',sans-serif;  
+  position: relative;
+  z-index: 99;
 }
 
 footer{
@@ -44,7 +46,11 @@ footer{
 .img-portada-home{
   width: 100%;
 }
-
+.cart-empty-items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 900px){
   #col-direction-home{
     

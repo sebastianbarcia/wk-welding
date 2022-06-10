@@ -1,7 +1,7 @@
 import CardItemsListContainer from '../components/carditemListContainer/CardItemsListContainer';
 import welderProducts from '../utils/welderProducts';
 import { useState, useEffect } from 'react';
-import { Container, Grid, Button } from '@mui/material';
+import { Grid, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { homeText } from '../utils/helper';
 import CircularProgress from '@mui/material/CircularProgress';

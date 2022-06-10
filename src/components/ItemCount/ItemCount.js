@@ -4,7 +4,7 @@ const ItemCount = ({stock , title, setShowButton, refreshQuantity, quantity}) =>
     
     const addToCart = () => {
         if(quantity < stock){
-        refreshQuantity(quantity + 1)
+        refreshQuantity(quantity => quantity + 1)
         }
     }
      const removeCart = () => {

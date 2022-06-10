@@ -1,8 +1,10 @@
-export const navBarOptions = 
-[{category : 'Equipos de soldadura y corte' , products : ['MMA' , 'TIG', 'MIG-MAG', 'Arco sumergido', 'Equipos de plasma']},
+const navBarOptions = 
+[{category : 'Soldadoras' , products : ['MMA' , 'TIG', 'MIG-MAG', 'Arco sumergido', 'Equipos de plasma']},
 {category: 'Antorchas', products : ['TIG' , 'MIG-MAG']},
 {category:'Automatización'},
-{category: 'Equipo de protección'},
-{category: 'Consumibles de soldadura'},
-{category: 'Respaldo ceramico'}
+{category: 'Proteccion'},
+{category: 'Consumibles'},
+{category: 'Respaldo'}
 ]
+
+export default navBarOptions

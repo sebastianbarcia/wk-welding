@@ -10,6 +10,7 @@ import AboutUs from './pages/AboutUs';
 import CategoryPage from './pages/CategoryPage';
 import AllProducts from './pages/AllProducts';
 import { CartProvider } from './context/CartContext';
+import Cart from './pages/cart';
 
 function App() {
   return (
@@ -21,13 +22,14 @@ function App() {
         </header>
         <main> 
           <Routes>
-            <Route exact path='/' element={<Home/>} ></Route>
+            <Route exact path = '/' element={<Home/>} ></Route>
             <Route exact path = '/us' element ={<AboutUs/>}></Route>
             <Route exact path = '/contact' element ={<Contact/>}></Route>
-            <Route exact path ='*' element={<Error404/>}></Route>
+            <Route exact path = '*' element={<Error404/>}></Route>
             <Route exact path = '/product/:id' element={<DetailsProduct/>} ></Route>
             <Route exact path = '/product' element={<AllProducts/>} ></Route>
-            <Route exact path='/category/:category' element={<CategoryPage/>}></Route>
+            <Route exact path = '/category/:category' element={<CategoryPage/>}></Route>
+            <Route exact path = '/cart' element ={<Cart/>}></Route>
           </Routes>      
         </main>            
         <footer>

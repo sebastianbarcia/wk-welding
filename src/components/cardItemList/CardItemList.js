@@ -37,7 +37,7 @@ const CardItemList = ({image,title,price, stock, id}) => {
                 {title}
                 </Typography>
                 <Typography variant={"subtitle1"} color="text.secondary">
-                {price}
+                € {price}
                 </Typography>
             </div>            
             <div>

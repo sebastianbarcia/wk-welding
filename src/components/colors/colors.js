@@ -10,7 +10,7 @@ const Colors = () => {
    
     return(
         <>
-            <Switch onChange={() =>setTorch(!torch)} {...torch ?  console.log("Con antorcha")  : console.log("Sin antorcha") } defaultChecked color="warning" className='' />   
+            <Switch onChange={() =>setTorch(!torch)} defaultChecked color="warning" className='' />   
             {torch ? <p>Con antorcha</p> : <p>Sin antorcha</p>}
         </>
     )

@@ -1,0 +1,39 @@
+.cart-empty-title{
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+.cart-empty-items{
+    margin-bottom: 3rem;
+    .button-items{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem ;
+        margin-top: 2rem;
+        #no-link-underline{
+            text-decoration: none;
+            .width-button-cart{
+                width: 250px;
+                height: 120px;
+                }   
+        }
+    
+    }
+    
+}
+
+.cart-list-products{
+
+    img{
+        width: 60px
+    }
+}
+.cart-acount-items{
+    background-color: rgb(225, 225, 225);
+    padding-right: 72px;
+        
+    button{
+        margin-bottom: 1rem;
+        
+    }
+}

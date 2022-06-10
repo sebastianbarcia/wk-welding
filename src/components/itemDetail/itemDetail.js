@@ -14,12 +14,6 @@ const ItemDetail = ({product}) => {
     const [showButton, setShowButton] = useState(false)
     const [quantity, setQuantity] = useState(1)
 
-    
-    // const addToProductToCart = () =>{
-    //     console.log("producto agregado al carrito", product)
-    //     console.log("cantidad añadida", quantity ) 
-    // }
-    
     const {price, title , id , image , stock} = product;
     
     return(
@@ -46,12 +40,12 @@ const ItemDetail = ({product}) => {
                     <Grid item lg={6} md={7}>     
                         <h2>{product.title}</h2>
                         <p>{product.description}</p> 
-                        <h2> {`€ ${product.price}`}</h2>                        
-                        <Colors />   
+                        <h2>€ {`${product.price}`}</h2> 
+                        {product.category === "Soldadoras" ? <Colors /> : " " }                      
                         <div className='item-card-margin'>
                         {!showButton ?
                         <ItemCount quantity = { quantity } refreshQuantity = {setQuantity} setShowButton={setShowButton}  stock={product.stock} title={product.title}/>
-                        : <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={() => addProductToCart({ image, title, price, stock, id, quantity }) }>Terminar compra</Button> }
+                        : <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={() => addProductToCart({ image, title, price, stock, id, quantity }) }><Link to={'/cart'}> Terminar compra </Link> </Button> }
                         </div> 
                                                                                                           
                     </Grid>
