@@ -1,43 +1,45 @@
 import CardItemsListContainer from '../components/carditemListContainer/CardItemsListContainer';
-import welderProducts from '../utils/welderProducts';
 import { useState, useEffect } from 'react';
 import { Grid, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { homeText } from '../utils/helper';
 import CircularProgress from '@mui/material/CircularProgress';
-import './home.scss'
+import './home.scss';
+import db from '../utils/firebaseConfig';
+import { collection, getDocs } from 'firebase/firestore';
 
 const Home = () => {
-    const [load, setLoad] = useState(false)
+    const [load, setLoad] = useState(false) 
     const [itemProduct, setWelders] = useState([]) 
-    const getProducts = () => {
-        return new Promise((resolve, reject) => {
-            setLoad(true)
-            setTimeout(() => {
-                setLoad(false);
-                resolve(welderProducts)
-            }, 2000)        
+
+    useEffect (() => {
+        setLoad(true)
+        setTimeout(() => {
+            setLoad(false);
+        getWelderProducts()
+
+        .then((response) => {
+               setWelders(response) 
+            })
+            
+        }, 1500)        
+        
+    }, [])   
+
+    const getWelderProducts = async () =>{
+       
+        const productSnapshot = await getDocs(collection(db, "welderProducts"));
+        const productList = productSnapshot.docs.map((doc) =>{
+            
+            let product = doc.data()
+            product.id = doc.id
+            return product
         })
+        return productList
     }
     
     const filterNovedad = itemProduct.filter(element => element.news === true)   
          
-    useEffect (() => {
-        
-        getProducts()
-        
-        .then((response) => {      
-            setWelders(response)
-           
-        })
-        .catch((error) =>{
-            console.log("Error: fallo la llamada")
-        })
-        .finally(() =>{
-            console.log("se termino la llamada")
-        })
-    }, [])
-
     if(load){
         return (
             <>

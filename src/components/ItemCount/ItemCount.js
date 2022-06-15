@@ -13,11 +13,6 @@ const ItemCount = ({stock , title, setShowButton, refreshQuantity, quantity}) =>
         }
      }
 
-    //Para agregar visualizar productos cargados por el usuario en el console.log
-     const onAddToCart = () => {
-         console.log(`Haz agregado ${quantity} unidades del producto ${title} quedan en stock ${stock - quantity}`)
-     }
-
     return(
         <>
             <div className="btn-quantity">

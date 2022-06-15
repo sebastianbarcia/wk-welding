@@ -3,12 +3,19 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import Fade from '@mui/material/Fade';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
+import Divider from '@mui/material/Divider';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Tooltip from '@mui/material/Tooltip';
+import ListItem from '@mui/material/ListItem';
 import './cartWidget.scss'
 import {useContext} from 'react'; 
 import CartContext from '../../context/CartContext';
 import ProductionQuantityLimitsOutlinedIcon from '@mui/icons-material/ProductionQuantityLimitsOutlined';
 import IconButton from '@mui/material/IconButton';
+import List from '@mui/material/List';
 
 function CartWidget() {
   const { cartListItems , deleteItemCart } = useContext(CartContext)
@@ -44,25 +51,33 @@ function CartWidget() {
       >
         <div className='container-cart'>
           {cartListItems.length === 0 && <div className='cartEmpty'><p>No hay productos en el carrito </p>< ProductionQuantityLimitsOutlinedIcon/> </div> }
+          <List className="cart-widget-list">
           {cartListItems.map((item) => {
             return(
-              <div className='cart-div' key={item.id}> 
-                <div className='badge-cart-info'>
-                    <p>{item.title}</p>
-                    <span>{item.quantity}</span>
-                    <span>{item.price}</span>
-                </div>
-                <div className='img-cart'>
-                    <img src={`${item.image}`} alt='img product'></img>
-                </div>
-                <div className='cart-delete'>
-                <IconButton aria-label="delete"  onClick={() => deleteItemCart( item.id )}>
-                    <DeleteForeverOutlinedIcon />
-                </IconButton>
-                </div>
-              </div>
-            )
-          })}            
+              <>
+              <ListItem  key={item.id}>
+              <ListItemAvatar>
+                  <Avatar  variant="rounded">
+                      <img src={item.image} />           
+                  </Avatar>
+              </ListItemAvatar>
+                  <ListItemText primary={item.title} secondary={item.price} />
+                  <div>
+                      <p>{item.quantity}</p>
+                  </div>
+              <Tooltip title="Delete">
+                  <IconButton onClick={() => deleteItemCart( item.id )}>
+                      <DeleteIcon />
+                  </IconButton>
+              </Tooltip>
+              
+          </ListItem>
+      <Divider variant="inset" component="li" />
+      </>   )
+          })}  
+          {cartListItems.length !== 0 ? <Button fullWidth variant ="contained" id="colorBtnAddToCart">Procesar compra</Button> : " " } 
+          
+          </List>          
         </div>
       </Menu>
     </div>

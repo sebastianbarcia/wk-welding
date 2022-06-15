@@ -10,11 +10,6 @@ const CardItemList = ({image,title,price, stock, id}) => {
   const [showButton, setShowButton] = useState(false)
   const [quantity, setQuantity] = useState(1);
   
-  // const addToProductToCart = () =>{
-  //       console.log("Haz agregado al carrito", quantity,  title, "quedan en stock", stock )
-  //       console.log("cantidad añadida",  ) 
-  //   }
- 
     return(   
       <div className='visible'>     
         <Card sx={{ maxWidth: 300}} >
@@ -42,7 +37,7 @@ const CardItemList = ({image,title,price, stock, id}) => {
             </div>            
             <div>
             {!showButton ?
-              <ItemCount quantity = {quantity} refreshQuantity = {setQuantity} setShowButton={setShowButton}  stock={stock} title={title}/>
+              <ItemCount quantity = { quantity } refreshQuantity = {setQuantity} setShowButton={setShowButton}  stock={stock} title={title}/>
               : <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={() => addProductToCart({ image, title, price, stock, id, quantity }) }>Terminar compra</Button> }
             </div>            
           </CardContent>

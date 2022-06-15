@@ -50,8 +50,6 @@ const CartProvider = ( {children} ) => {
 
     } 
      
-    
-
     useEffect (() => { 
         
     if(cartListItems.length === 0 && (localStorage.getItem("order") !== null)) {
@@ -59,8 +57,7 @@ const CartProvider = ( {children} ) => {
         setCartListsItems(bringOrder)   
     } 
     if(localStorage.getItem("account") !== null ){
-        let bringAccount = JSON.parse( localStorage.getItem("account"))
-         console.log("fdfdf") 
+        let bringAccount = JSON.parse( localStorage.getItem("account")) 
         setTotalPrice(bringAccount)
     }
      }, [])
