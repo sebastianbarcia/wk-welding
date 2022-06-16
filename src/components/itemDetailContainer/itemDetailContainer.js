@@ -9,6 +9,8 @@ const ItemDetailContainer = () => {
 const {id} = useParams();
 const [load, setLoad] = useState(false) 
 const [productSingle, setProductSingle] = useState({});
+
+
   
     const getWelderProducts = async() =>{
         const docRef = doc(db, "welderProducts", id);
@@ -25,10 +27,10 @@ const [productSingle, setProductSingle] = useState({});
         .then((response) => {  
             setProductSingle(response);  
             })
-        }, 1500)  
+        }, 500)  
    }, [id])
 
-      if(load){
+      if(load && (productSingle.id === undefined)){
          return (
              <>
                  <div className='spinner-styles'>
@@ -36,7 +38,7 @@ const [productSingle, setProductSingle] = useState({});
                  </div>
              </>
          )
-     }else{
+     }else if (productSingle.id !== undefined){
     return(
         <>
             <ItemDetail product = {productSingle} />
