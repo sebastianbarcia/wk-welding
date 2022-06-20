@@ -22,7 +22,7 @@ const Home = () => {
                setWelders(response) 
             })
             
-        }, 1500)        
+        }, 500)        
         
     }, [])   
 

@@ -23,7 +23,7 @@ const FooterNav = () =>{
                 <ul>
                         {footer.map((navFooter) =>{ 
                             return(
-                        <li key={navFooter.id}><a href={navFooter.link}>{navFooter.title}</a></li>
+                        <li key={navFooter.id}><Link to={navFooter.link}>{navFooter.title}</Link></li>
                             )
                         })
                         }

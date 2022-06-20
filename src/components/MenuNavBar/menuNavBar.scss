@@ -1,0 +1,26 @@
+#demo-customized-button{
+    background-color: white ;
+    color: rgb(67, 67, 67);
+}
+
+#color-menuNavBar{
+    color: rgb(67, 67, 67);
+    height: 50px;
+}
+
+@media (max-width: 900px) {
+    .menu-navBar{
+        display: flex;
+        justify-content: center;
+        height: 48px;
+        #demo-customized-button{
+            background-color: unset;
+            color: rgb(67, 67, 67);
+            width: 100%;
+        }
+    }
+    .menu-navBar:hover {       
+      background-color: #e6e6e6;
+        cursor: pointer;
+    }
+}

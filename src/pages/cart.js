@@ -13,12 +13,20 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import { Link } from "react-router-dom";
 import navBarOptions from "../utils/navBarOptions";
+import { useNavigate } from "react-router-dom";
 
 
 const Cart = () =>{
     let bringOrder = JSON.parse( localStorage.getItem("order"))   
     const { deleteItemCart , totalPrice } = useContext(CartContext)
-    console.log(bringOrder.length)
+    
+    const navigate = useNavigate();
+    const btnFinishBuy = () =>{
+        navigate('/order')
+    }
+    const alreadyBuy = () =>{
+        navigate('/')
+    }
     
     if(bringOrder.length == 0){
         return(
@@ -96,8 +104,8 @@ const Cart = () =>{
                     <ListItem>
                         <ListItemText primary="Precio total"/><h3>€ {totalPrice.toFixed(2)}</h3>
                     </ListItem>
-                    <Button fullWidth variant ="contained" id="colorBtnAddToCart">Completar compra</Button>
-                    <Button fullWidth variant ="outlined" color="warning">Continuar comprando</Button>
+                    <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={btnFinishBuy}>Completar compra</Button>
+                    <Button fullWidth variant ="outlined" color="warning" onClick={alreadyBuy}>Continuar comprando</Button>
                 </List>
             </Grid>
         </Grid>

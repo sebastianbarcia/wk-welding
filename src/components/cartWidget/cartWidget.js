@@ -17,7 +17,13 @@ import ProductionQuantityLimitsOutlinedIcon from '@mui/icons-material/Production
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 
+import { useNavigate } from "react-router-dom";
+
 function CartWidget() {
+  const navigate = useNavigate();
+  const btnViewCart = () =>{
+    navigate('/cart')
+}
   const { cartListItems , deleteItemCart } = useContext(CartContext)
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -75,7 +81,7 @@ function CartWidget() {
       <Divider variant="inset" component="li" />
       </>   )
           })}  
-          {cartListItems.length !== 0 ? <Button fullWidth variant ="contained" id="colorBtnAddToCart">Procesar compra</Button> : " " } 
+          {cartListItems.length !== 0 ? <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={btnViewCart}>Procesar compra</Button> : " " } 
           
           </List>          
         </div>

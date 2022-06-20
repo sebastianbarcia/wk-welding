@@ -11,6 +11,7 @@ import CategoryPage from './pages/CategoryPage';
 import AllProducts from './pages/AllProducts';
 import { CartProvider } from './context/CartContext';
 import Cart from './pages/cart';
+import FormOrder from './pages/FormOrder';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route exact path = '/product' element={<AllProducts/>} ></Route>
             <Route exact path = '/category/:category' element={<CategoryPage/>}></Route>
             <Route exact path = '/cart' element ={<Cart/>}></Route>
+            <Route exact path = '/order' element={<FormOrder/>} ></Route>
           </Routes>      
         </main>            
         <footer>

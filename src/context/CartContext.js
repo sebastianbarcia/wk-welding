@@ -43,15 +43,19 @@ const CartProvider = ( {children} ) => {
         
         let inCart = cartListItems.find(cartItem => cartItem.id === product);
         
-        const priceSet = totalPrice - inCart.price * inCart.quantity
+        const priceSet = totalPrice - (inCart.price * inCart.quantity)
         setTotalPrice(priceSet)
         
         localStorage.setItem("account" , priceSet)   
-
     } 
-     
+    
+    const clearOrder = () =>{
+        setCartListsItems([])
+        setTotalPrice(0)
+    }
+
     useEffect (() => { 
-        
+       
     if(cartListItems.length === 0 && (localStorage.getItem("order") !== null)) {
         let bringOrder = JSON.parse( localStorage.getItem("order"))    
         setCartListsItems(bringOrder)   
@@ -66,7 +70,8 @@ const CartProvider = ( {children} ) => {
         cartListItems,
         addProductToCart,
         deleteItemCart,
-        totalPrice
+        totalPrice,
+        clearOrder
     }
    
     return(
