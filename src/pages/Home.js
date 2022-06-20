@@ -43,10 +43,9 @@ const Home = () => {
     if(load){
         return (
             <>
-            <div className='spinner-styles'>
-                <CircularProgress color="warning" /> 
-            </div>
-           
+                <div className='spinner-styles'>
+                    <CircularProgress color="warning" /> 
+                </div>           
             </>
         )
     }else{

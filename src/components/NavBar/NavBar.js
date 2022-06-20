@@ -50,62 +50,62 @@ const NavBar = () =>{
             <AppBar position="static">               
                 <Toolbar className='toolbar'>
                     <Container maxWidth="xl">
-                        <Grid container>
-                            <Grid item md={2} xs={12} className = 'pos-logo'>
+                        <Grid container id='grid-mediaquery'>
+                            <Grid item md={2}  className = 'pos-logo'>
                                 <Link to='/' className='contenedorLogo'>
                                     <img className='styleLogo' src="./logo-wk-v2-png.png" alt='logo' />
                                 </Link>
                             </Grid>
-                            <Grid md={7.7} xs={6}>
-                            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
-                                <Button onClick={handleOpenNavMenu}>
-                                <MenuIcon/>
-                                </Button>
-                                <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorElNav}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'left',
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                                open={Boolean(anchorElNav)}
-                                onClose={handleCloseNavMenu}
-                                sx={{
-                                    display: { xs: 'block', md: 'none' },
-                                }}
-                                >
-                                {pages.map((page) => (
-                                     page.id === 1 ? <CustomizedMenus/> : 
-                                    <Link to={page.link}>
-                                        <MenuItem key={page.id} onClick={handleCloseNavMenu}>    
-                                            <Button id="links-nav-bar">               
+                            <Grid md={7.7}  className='grid-links'>
+                                <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
+                                    <Button onClick={handleOpenNavMenu}>
+                                    <MenuIcon/>
+                                    </Button>
+                                    <Menu
+                                    id="menu-appbar"
+                                    anchorEl={anchorElNav}
+                                    anchorOrigin={{
+                                        vertical: 'bottom',
+                                        horizontal: 'left',
+                                    }}
+                                    keepMounted
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'left',
+                                    }}
+                                    open={Boolean(anchorElNav)}
+                                    onClose={handleCloseNavMenu}
+                                    sx={{
+                                        display: { xs: 'block', md: 'none' },
+                                    }}
+                                    >
+                                    {pages.map((page) => (
+                                        page.id === 1 ? <CustomizedMenus/> : 
+                                        <Link to={page.link}>
+                                            <MenuItem key={page.id} onClick={handleCloseNavMenu}>    
+                                                <Button id="links-nav-bar">               
+                                                    {page.title}
+                                                </Button>
+                                            </MenuItem>
+                                        </Link>
+                                        ))}
+                                    </Menu>
+                                </Box>
+                                <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className="link-buttons">
+                                    {pages.map((page) => (
+                                        page.id === 1 ? <CustomizedMenus/> : 
+                                        <Link to={page.link} >
+                                            <Button id='no-color' 
+                                                key={page.id}
+                                                onClick={handleCloseNavMenu}
+                                                sx={{ my: 2, color: 'white', display: 'block' }}>
                                                 {page.title}
                                             </Button>
-                                        </MenuItem>
-                                    </Link>
+                                        </Link>                                   
                                     ))}
-                                </Menu>
-                            </Box>
-                            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className="link-buttons">
-                                {pages.map((page) => (
-                                    page.id === 1 ? <CustomizedMenus/> : 
-                                    <Link to={page.link} >
-                                        <Button id='no-color' 
-                                            key={page.id}
-                                            onClick={handleCloseNavMenu}
-                                            sx={{ my: 2, color: 'white', display: 'block' }}>
-                                            {page.title}
-                                        </Button>
-                                    </Link>                                   
-                                ))}
-                            </Box>
+                                </Box>
                             </Grid>
-                            <Grid md={2} xs={6} className="cart-widget">                               
+                            <Grid md={2}  className="cart-widget">                               
                                 <Tooltip title="Open settings">
                                     <CartWidget/>     
                                 </Tooltip>                
