@@ -34,7 +34,7 @@ and set the time and loaded.*/
             })
         }, 1250)  
    }, [id])
-
+   
       if(load && (productSingle.id === undefined)){
          return (
              <>
