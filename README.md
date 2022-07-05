@@ -1,5 +1,4 @@
 # ABOUT THE PROJECT
-
 🌐 WK WELDING E-COMMERCE WEB PAGE
 This is the page of WK Welding (a company specialized in welding), where users can get to know the company, buy its products and contact it.
 
@@ -57,13 +56,15 @@ git push https://github.com/sebastianbarcia/wk-welding.git
 ## TESTS WEB PAGE 
 The site was tested with different people to measure its usability and user experience.
 
+### WATCH THE DEMO ON LAPTOP SCREEN:
+![video](readme-utils/wk-webdemo-presentation.gif)
+
 ## CONTRIBUTORS
+🎁 Many thanks to my class tutor Christian Chavez and Professor Christian Ortiz. 
+❤️ Many thanks to my family: Eliana, Paz and Borja and also to me 🐶 Shanti
 
-Licence 📄
+## LICENCE 
 This project is licensed under the Sebastian Barcia License and was created for use in Coderhouse's reactJS course
-
-Agradecimientos 🎁
-Muchas gracias a mi tutor de la clase Christian Chavez y al profesor Christian Ortiz. 📢
 
 ⌨️ with ❤️ by Sebastian Barcia 😊
 
