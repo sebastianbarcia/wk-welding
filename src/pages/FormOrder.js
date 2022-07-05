@@ -21,11 +21,11 @@ const FormOrder = () =>{
     const handleOpen = () => {
        
         setMailVerify(/\S+@\S+/.test(formValue.mail))
-        setNameCheck(formValue.name.length <= 3);
-        setPhoneCheck(formValue.phone.length <= 5);
-        setAdressCheck(formValue.address.length <= 4);
-        setCityCheck(formValue.city.length <= 3);
-        setCountryCheck(formValue.country.length <= 3)
+        setNameCheck(formValue.name.length < 3);
+        setPhoneCheck(formValue.phone.length < 5);
+        setAdressCheck(formValue.address.length < 4);
+        setCityCheck(formValue.city.length < 3);
+        setCountryCheck(formValue.country.length < 3)
 
         if(verifySetClient){
         setOpen(true)

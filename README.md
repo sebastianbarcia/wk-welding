@@ -57,7 +57,10 @@ git push https://github.com/sebastianbarcia/wk-welding.git
 The site was tested with different people to measure its usability and user experience.
 
 ### WATCH THE DEMO ON LAPTOP SCREEN:
-![video](readme-utils/wk-webdemo-presentation.gif)
+![DesktopVideo](readme-utils/wk-webdemo-presentation.gif)
+
+### WATCH THE DEMO ON MOBILE SCREEN:
+![MobileVideo](readme-utils/wk-webdemo-presentation-mobile.gif)
 
 ## CONTRIBUTORS
 🎁 Many thanks to my class tutor Christian Chavez and Professor Christian Ortiz. 
