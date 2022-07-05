@@ -1,0 +1,66 @@
+.error-form{
+    color: red;
+    margin-top: 0;
+}
+.title-cartandorder{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    h2{
+        padding-left: 8%;
+    }
+    .form-styles{
+        padding-left: 8%;
+        padding-right: 8%;
+        .color-account-order{
+           background-color: rgb(225, 225, 225);
+           height: 600px;
+           padding-right: 4%;
+           padding-left: 4%;
+            width: 30%;
+           position: absolute;
+           padding-top: 7rem;
+           top: 52px;
+           z-index: -1; 
+        }
+    }
+}
+@media (max-width: 900px){
+    #title-order{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .title-cartandorder{
+        padding-left: 0px;
+        padding-right: 0px;
+        .form-styles{
+            padding-left: 0%;
+            padding-right: 0%;
+           .order-reverse{
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 2rem;
+            .form-media-orders{
+                padding-right: 8%;
+                padding-left: 8%;
+            }
+        }
+        }
+    #color-order-form{
+        position: unset;
+        width: 100%;
+        top: 0px;
+        height: 100px;
+        padding: 2rem 0rem;
+        .paragraph-theme{
+            padding-left: 8%;
+            padding-right: 8%;
+            h3{
+                margin-top: 0%;
+            }
+        }
+        .quit-media-order{
+            display: none;
+        }
+    }
+}
+}

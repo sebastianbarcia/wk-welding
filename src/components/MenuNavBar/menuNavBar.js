@@ -7,6 +7,10 @@ import { Link } from 'react-router-dom';
 import navBarOptions from '../../utils/navBarOptions';
 import './menuNavBar.scss'
 
+//Menu content fetched from ../../utils/navBarOptions
+
+//NavBar menu styles
+
 const StyledMenu = styled((props) => (
   <Menu
     elevation={0}
@@ -49,11 +53,14 @@ const StyledMenu = styled((props) => (
 }));
 
 export default function CustomizedMenus() {
+  //Opening and closing menu
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  //Open menu
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  //Close menu
   const handleClose = () => {
     setAnchorEl(null);
   };

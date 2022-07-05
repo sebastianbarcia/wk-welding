@@ -1,15 +1,20 @@
 import '../pages/AboutUs.scss';
 import { Link } from 'react-router-dom';
-import { Button, Container, Grid } from '@mui/material';
+import { Button, Container, Grid , Typography } from '@mui/material';
 import { textContact , textAboutUs } from '../utils/helper';
 
 const AboutUs = () =>{
+    //Cover image
     const containerStyle = {
         backgroundImage: 
-          "url(./portada_a+-8-negro.jpg)",
-        height: "600px",       
+            "url(./portada_a+-8-negro.jpg)", 
       };
-
+      //Second section background image
+      const AboutUsSection = {
+        backgroundImage:
+        "url(./visual-background-01.svg)",
+      }
+      //Texts from '../utils/helper'
     return(
         <>
         <section className='img-about-us' style={containerStyle} >
@@ -20,7 +25,7 @@ const AboutUs = () =>{
                        return (
                         <>
                             <h1>{title}</h1> 
-                            <p>{paragraph}</p>
+                            <Typography variant="body1" gutterBottom>{paragraph}</Typography>
                         </> 
                         )
                     })}                      
@@ -28,19 +33,19 @@ const AboutUs = () =>{
                 </Grid>               
             </Container>            
         </section>
-        <Container fixed>
+        <Container maxWidth="xl"  className='section-aboutUs' style={ AboutUsSection}>
             <Grid className='about-us-contact'>
                 {
                     textContact.map(({title,paragraph}) => {
                         return(
                             <>
                                 <h3>{title}</h3>
-                                <p>{paragraph}</p>
+                                <Typography variant="body1" gutterBottom lineHeight={2}>{paragraph}</Typography>
                             </>
                         )
                     })
                 }
-                
+                <div className='decoration-aboutus'></div>
                 <Button variant="contained" id = "colorBtnAddToCart"><Link to='/contact'>Contactenos</Link> </Button>
             </Grid>
         </Container>

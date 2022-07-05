@@ -4,3 +4,55 @@
     justify-content: center;
     align-items: center;
 }
+#color-home-subtitle{
+    color: #ea5127;
+}
+.frontpage-home{
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 4rem; 
+    
+    img{
+        align-self: center;
+        width: 60%;
+        border-radius: 10px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    h3{
+        color: white;
+        font-size: 30px;
+        box-shadow: black;
+        margin-bottom: 1rem;   
+    }
+    button{
+        position: relative;
+        bottom: 8%;
+        right: 20%;
+    }
+}
+
+@media (max-width: 900px){
+    .frontpage-home{
+        height: 450px;
+        img{
+            align-self: center;
+            width: 80%;
+        }
+        h3{
+            text-align: center;
+            font-size: 120%;
+            margin-bottom: 2rem;
+        }
+        button{
+            bottom: 12%;
+        }
+}
+}

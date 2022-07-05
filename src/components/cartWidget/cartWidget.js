@@ -17,7 +17,6 @@ import ProductionQuantityLimitsOutlinedIcon from '@mui/icons-material/Production
 import IconButton from '@mui/material/IconButton';
 import List from '@mui/material/List';
 import { useNavigate } from "react-router-dom";
-import { useEffect , useState } from 'react';
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
 
@@ -29,38 +28,38 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-function useWindowsSize () {
-  const [size,setSize] = useState([window.innerWidth]);
-  useEffect (() => {
-
-    const handleWindowSize = () =>{
-      setSize([window.innerWidth])
-    }
-    window.addEventListener("resize", handleWindowSize);
-   
-  },  [])   
-  return size;
-}
-
 function CartWidget() {
-  const [width] = useWindowsSize(); 
-
+ 
   const navigate = useNavigate();
+  
+  //Function to redirect to index and close the cartwidget
   const btnViewCart = () =>{
-    navigate('/cart')
+    navigate('/cart');
+    setAnchorEl(null);
 }
+  //Fetch the contexts of cart items and to delete each item
   const { cartListItems , deleteItemCart } = useContext(CartContext)
+  
+  //Hook to close and open the cartwidget
   const [anchorEl, setAnchorEl] = React.useState(null);
+
+  //Constant to open the cartwidget
   const open = Boolean(anchorEl);
+
+  //Event to open the cartwidget
   const handleClick = (event) => {
+    //If you are in the pages "/cart" or "/order" it does not open the cartwidget 
+    if(window. location. pathname !== "/cart" && window. location. pathname !== "/order"){
     setAnchorEl(event.currentTarget);
+    }
   };
+  //close the cartwidget
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+  //Add the items and their quantities to show them in the badge of the "cart" button
   const plusItemsQuantity = cartListItems.map(item => item.quantity).reduce((prev, curr) => prev + curr, 0);
-  
+    
   return (
         <div>
           <Button
@@ -71,7 +70,7 @@ function CartWidget() {
             onClick={handleClick}
           >
             <StyledBadge badgeContent={plusItemsQuantity} color="secondary">
-            <ShoppingCartOutlinedIcon className={width > 900 ? 'spaceBtn' : ""}></ShoppingCartOutlinedIcon>{width < 900 ? "" : "Carrito" }  
+            <ShoppingCartOutlinedIcon className='spaceBtn'></ShoppingCartOutlinedIcon><span id='cart-disappear'>Carrito</span>  
             </StyledBadge> 
           </Button>
           <Menu
@@ -96,11 +95,11 @@ function CartWidget() {
                           <img src={item.image} />           
                       </Avatar>
                   </ListItemAvatar>
-                      <ListItemText primary={item.title} secondary={item.price} />
+                      <ListItemText primary={item.title} secondary={`€ ${item.price}`} />
                       <div>
                           <p>{item.quantity}</p>
                       </div>
-                  <Tooltip title="Delete">
+                  <Tooltip title="Eliminar">
                       <IconButton onClick={() => deleteItemCart( item.id )}>
                           <DeleteIcon />
                       </IconButton>
@@ -110,8 +109,9 @@ function CartWidget() {
           <Divider variant="inset" component="li" />
           </>   )
           })}  
-          {cartListItems.length !== 0 ? <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={btnViewCart}>Procesar compra</Button> : " " } 
-          
+          {cartListItems.length !== 0 ? <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={btnViewCart}>
+            Procesar compra
+            </Button> : " " } 
           </List>          
         </div>
       </Menu>

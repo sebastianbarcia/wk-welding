@@ -7,10 +7,11 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { useNavigate } from 'react-router-dom';
 
-
-
+//Modal to finish purchase process
+//Props to enter information in it
 export default function ModalCheckOut({ productsOrders, open , data , idClient }) {
   const navigate = useNavigate();
+  //Pressing the "close" button redirects the page to the index and the local storage is deleted
   const btnCall = () =>{
   navigate('/')
   localStorage.clear("order")

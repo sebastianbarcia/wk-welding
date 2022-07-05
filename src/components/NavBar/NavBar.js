@@ -11,9 +11,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-
+import { pages } from '../../utils/navBarOptions';
 import CustomizedMenus from '../MenuNavBar/menuNavBar';
 
+//Content: fetched from pages '../../utils/navBarOptions'
+
+//Menu styles
 const themeWK = createTheme({
     palette:{
         primary:{
@@ -27,13 +30,7 @@ const themeWK = createTheme({
 
 
 const NavBar = () =>{   
-
-    const pages = [
-    {title: 'Productos', link : '', id : 1 },
-    {title: 'Nosotros', link : '/us', id : 2 }, 
-    {title: 'Contacto' , link: '/contact' , id : 3 }
-    ];
-
+    //Opening and closing menu
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     
     const handleOpenNavMenu = (event) => {
@@ -47,7 +44,7 @@ const NavBar = () =>{
    return(
        <>         
         <ThemeProvider theme={themeWK}>   
-            <AppBar position="static">               
+            <AppBar position="static" id='navBar-fixed'>               
                 <Toolbar className='toolbar'>
                     <Container maxWidth="xl">
                         <Grid container id='grid-mediaquery'>

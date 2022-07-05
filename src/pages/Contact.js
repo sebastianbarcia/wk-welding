@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+import { Container, Grid , Typography } from "@mui/material";
 import ContactsForms from "../components/inputsForm/contactForm";
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
@@ -6,6 +6,7 @@ import SettingsCellOutlinedIcon from '@mui/icons-material/SettingsCellOutlined';
 import '../pages/Contact.scss';
 import { contact } from "../utils/helper";
 
+//imported the texts from "../utils/helper"
 const Contact = () => {
     return(
         <>
@@ -17,10 +18,10 @@ const Contact = () => {
                         {contact.map(({title,phone,mail,movilPhone}) => {
                         return(
                             <>
-                                <p>{title}</p>
-                                <p><PhoneOutlinedIcon/>{phone}</p>
-                                <p><MailOutlinedIcon/>{mail}</p>
-                                <p><SettingsCellOutlinedIcon/>{movilPhone}</p>
+                                <Typography>{title}</Typography>
+                                <Typography><PhoneOutlinedIcon className="spacing-icon-typography"/>{phone}</Typography>
+                                <Typography><MailOutlinedIcon className="spacing-icon-typography"/>{mail}</Typography>
+                                <Typography><SettingsCellOutlinedIcon className="spacing-icon-typography"/>{movilPhone}</Typography>
                             </>
                             )}
                         )}                      

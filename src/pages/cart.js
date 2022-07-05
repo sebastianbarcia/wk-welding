@@ -1,4 +1,4 @@
-import { Container , Grid , Button } from "@mui/material"
+import { Container , Grid , Button, Typography } from "@mui/material"
 import { useContext } from "react";
 import CartContext from "../context/CartContext";
 import Divider from '@mui/material/Divider';
@@ -15,25 +15,37 @@ import { Link } from "react-router-dom";
 import navBarOptions from "../utils/navBarOptions";
 import { useNavigate } from "react-router-dom";
 
-
+//Content from "../utils/navBarOptions"
 const Cart = () =>{
-    let bringOrder = JSON.parse( localStorage.getItem("order"))   
-    const { deleteItemCart , totalPrice } = useContext(CartContext)
+    //Constant to fetch data previously saved in the localStorage
+    let bringOrder = JSON.parse( localStorage.getItem("order"))
+    let bringPrice = JSON.parse(localStorage.getItem("account")) 
+
+    //Context brought with function to delete item
+    const { deleteItemCart } = useContext(CartContext)
+    
+    //Price calculation + shipping and total
+    const totalDelivery = bringPrice * 0.03; 
+    const totalPriceWithDelivery = totalDelivery + bringPrice;
     
     const navigate = useNavigate();
+    //Function to send to the next step of the purchase through hook useNavigate
     const btnFinishBuy = () =>{
         navigate('/order')
     }
+    //Function to send the user to the index if he wants to continue buying
     const alreadyBuy = () =>{
         navigate('/')
     }
     
+    /*If the local storage is empty, a page with an empty cart is shown, in case it has
+    cart items the cart is rendered with its items*/ 
     if(bringOrder.length == 0){
         return(
             <>
                 <Container maxWidth="xl" className="cart-empty-title">
-                    <h2>No hay productos en tu carrito</h2>
-                    <p>Mira en nuestras secciones</p>
+                    <Typography variant="h4">No hay productos en tu carrito</Typography>
+                    <Typography variant="subtitle1">Mira en nuestras secciones</Typography>
                 </Container>
                 <Container maxWidth="lg">
                     <Grid container className="cart-empty-items" >
@@ -56,12 +68,12 @@ const Cart = () =>{
 
     return(
         <>
-        <Container Container>  
-            <div>
+        <Container container id="margin-cart-account" maxWidth={"xl"}>  
+            <div id="title-cart-account">
                 <h2>Carrito</h2>
             </div>
-            <Grid container gap={6} spacing={9}>
-                <Grid item xs={12} md={7} > 
+            <Grid container gap={6} spacing={9} id={"media-items-acounts"}>
+                <Grid item xs={12} md={7} id="cart-grid-account"> 
                     <List className="cart-list-products">
                         {bringOrder.map((item) => {
                             return (
@@ -72,11 +84,11 @@ const Cart = () =>{
                                                 <img src={item.image} />           
                                             </Avatar>
                                         </ListItemAvatar>
-                                            <ListItemText primary={item.title} secondary={item.price} />
+                                            <ListItemText primary={item.title} secondary={`€ ${item.price}`} />
                                             <div>
                                                 <p>{item.quantity}</p>
                                             </div>
-                                        <Tooltip title="Delete">
+                                        <Tooltip title="Eliminar">
                                             <IconButton onClick={() => deleteItemCart( item.id )}>
                                                 <DeleteIcon />
                                             </IconButton>
@@ -90,19 +102,18 @@ const Cart = () =>{
                         )
                     }
                 </List>
-            </Grid>
-            
-            <Grid item xs={12} md={4} className="cart-acount-items">
+            </Grid>            
+            <Grid item xs={12} md={4} className="cart-acount-items" id={"media-acount-cart"}>
                 <List component="nav" aria-label="mailbox folders">
                     <ListItem >
-                        <ListItemText primary="Subtotal"/> <p>€ {totalPrice.toFixed(2)}</p>
+                        <ListItemText primary="Subtotal"/> <p>€ {bringPrice.toFixed(2)}</p>
                     </ListItem>
                     <Divider />
                     <ListItem  divider>
-                        <ListItemText primary="Gastos de envios" /><p>€ {(totalPrice * 0.1).toFixed(2)}</p>
+                        <ListItemText primary="Gastos de envios" /><p>€ {totalDelivery.toFixed(2)}</p>
                     </ListItem>
                     <ListItem>
-                        <ListItemText primary="Precio total"/><h3>€ {totalPrice.toFixed(2)}</h3>
+                        <ListItemText primary="Precio total"/><h3>€ {totalPriceWithDelivery.toFixed(2)}</h3>
                     </ListItem>
                     <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={btnFinishBuy}>Completar compra</Button>
                     <Button fullWidth variant ="outlined" color="warning" onClick={alreadyBuy}>Continuar comprando</Button>

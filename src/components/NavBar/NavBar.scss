@@ -1,3 +1,7 @@
+#navBar-fixed{
+    position: fixed;
+    top: 0px;
+}
 .toolbar{
     .pos-logo{
         display: flex;
@@ -49,6 +53,9 @@ a{
 .toolbar{
     padding-right: 0%;
     padding-left: 0%;
+    .spaceBtn{
+        margin-right: 0;
+    }
     div{
         padding-right: 0%;
         padding-left: 0%; 
@@ -63,6 +70,7 @@ a{
             grid-area: logo;
             justify-self: center;
             align-self: center;
+            width: 12rem;
             .styleLogo{            
                 width: 100%;
                 z-index: 99;
@@ -72,10 +80,49 @@ a{
             grid-area: links;
             justify-self: center;
             align-self: center;
+            button{
+                color: #ea5127;
+                background-color: white;
+            }
         }
         .cart-widget{
             grid-area: cart-widget;
             }
         }
     } 
+    #cart-disappear{
+        display: none ;
+    }
 }
+@media (max-width: 374px) { 
+    .toolbar{
+        div{
+            .pos-logo{
+            width: 9rem;
+            }
+        }
+    }
+}
+@media (max-width: 314px) { 
+    .toolbar{
+        div{
+            .pos-logo{
+            width: 5rem;
+            }
+        }
+    }
+}
+
+//fixing error mui
+@media only screen and (min-width: 899.9px)and(max-width:900.9px) {
+    .toolbar{
+        div{
+            #grid-mediaquery{
+                display: flex ;
+                margin-top: 0rem ;
+                margin-bottom: 0rem ;
+            }
+        }
+    }
+}
+ 

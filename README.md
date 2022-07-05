@@ -1,32 +1,39 @@
-# WK-WELDING
+# ABOUT THE PROJECT
 
-It is a company of supplies for welding.
+🌐 WK WELDING E-COMMERCE WEB PAGE
+This is the page of WK Welding (a company specialized in welding), where users can get to know the company, buy its products and contact it.
 
-# Funcionality
+🏁 COMPLETION OF THE PROJECT
+The project is currently being worked on and will end on July 7, 2022. 
 
-The project was born in order to make a shopping cart for WK Welding products.
+## TOOLS PROJECT
+⚒️ To create the site, these tools were mainly used: 
 
-# About this project
+❤️ REACT JS : React is an open source Javascript library designed to create user interfaces with the aim of facilitating the development of applications in a single page.
 
-The project is currently being worked on and will end on July 1, 2022.
-
-# Tools UI
-
-Components, icons, styles, and layout grids of "Material UI" taken from
+✨ UI MATERIAL : Components, icons, styles, and layout grids of "Material UI" taken from
 https://mui.com/
 
-## Getting Started with Create React App
+🔙 BACKEND : Using Firebase to call items that are hosted on the backend and to send order and contact information.
 
+🎨 SASS: Sass was used to be able to articulate the style of the project.
+
+🖌️ Images and vectors were worked with illustrator and photoshop.
+
+### TO START PROGRAM
+
+### Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/sebastianbarcia/wk-welding.git).
-Is open source code for modify to improve the proyect
+Is open source code for modify to improve the proyect.
 
-## Install
-
+### Install
 You can Install de repository from here: 
 `https://github.com/sebastianbarcia/wk-welding.git`
 
-## Available Scripts
+### Node modules    
+Please install node modules. Go to terminal, once there type npm i. 
 
+### Available Scripts
 In the project directory, you can run:
 
 ### `npm start`
@@ -34,65 +41,48 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+Your browser should show this:
+![](readme-utils/img-webwk.jpg)
+
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-### `Push to github repository `
+### IF YOU WOULD LIKE TO CONTRIBUTE TO OUR SITE, CREATE A BRANCH ON GITHUB AND `Push to github repository ` 
+git branch new_branch 
+git checkout new_branch
 git add all / git add .
 git commit -m "Nuevo mensaje"
 git push https://github.com/sebastianbarcia/wk-welding.git
+
+#### TESTS WEB PAGE 
+The site was tested with different people to measure its usability and user experience.
+
+###### CONTRIBUTORS
+
+Licence 📄
+This project is licensed under the Sebastian Barcia License and was created for use in Coderhouse's reactJS course
+
+Agradecimientos 🎁
+Muchas gracias a mi tutor de la clase Christian Chavez y al profesor Christian Ortiz. 📢
+
+⌨️ with ❤️ by Sebastian Barcia 😊
+
+###### ABOUT ME
+
+const sebastianbarcia = {
+  pronouns: "he" | "him",
+  code: [Javascript, HTML, CSS],
+  tools: [React, Bootstrap, MUI, Git, Sass, Adobe XD, Figma, Illustrator, Photoshop],
+}
+
+- 👯 participate in the creation of the website [restaurant.pe](https://restaurant.rowe.mx/)
+
+- 👨‍💻 All of my projects are available at [https://github.com/sebastianbarcia](https://github.com/sebastianbarcia)
+
+- 💬 Ask me about **React JS, Javascript, HTML5, CSS3**
+
+- 📫 How to reach me **sebastianbarcia@hotmail.com**
+
+Follow me! [Linkedin] https://www.linkedin.com/in/sebastian-barcia/
+
+

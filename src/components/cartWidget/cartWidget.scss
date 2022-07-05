@@ -22,3 +22,9 @@ width: 300px;
 #colorBtnAddToCart{
     color: white;
 }
+
+@media (max-width: 350px){
+    .cart-widget-list{
+    width: 250px;
+    }
+}

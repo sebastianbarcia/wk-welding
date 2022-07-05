@@ -6,12 +6,17 @@ import db from "../../utils/firebaseConfig";
 import { CircularProgress } from "@mui/material";
 
 const ItemDetailContainer = () => {
+//Hook useParams to set the id of the url
 const {id} = useParams();
-const [load, setLoad] = useState(false) 
+
+//Hook State to run spinner/load on wait
+const [load, setLoad] = useState(false);
+
+//Hook State to set the product load
 const [productSingle, setProductSingle] = useState({});
 
-
-  
+/*Called the back end to request the product with the id of the useParams
+and set the time and loaded.*/ 
     const getWelderProducts = async() =>{
         const docRef = doc(db, "welderProducts", id);
         const docSnaptshop = await getDoc(docRef);
@@ -27,7 +32,7 @@ const [productSingle, setProductSingle] = useState({});
         .then((response) => {  
             setProductSingle(response);  
             })
-        }, 500)  
+        }, 1250)  
    }, [id])
 
       if(load && (productSingle.id === undefined)){
@@ -44,7 +49,6 @@ const [productSingle, setProductSingle] = useState({});
             <ItemDetail product = {productSingle} />
         </>
     )
-}
-}
+}}
 
 export default ItemDetailContainer

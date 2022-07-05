@@ -1,14 +1,15 @@
 import { Typography, CardActionArea, Card, CardContent, CardMedia, Grid, Button } from "@mui/material";
-import ItemCount from '../ItemCount/ItemCount';
 import './CardItemList.scss';
 import { Link } from "react-router-dom";
-import { useState , useContext } from "react";
+import { useContext } from "react";
 import CartContext from "../../context/CartContext";
 
+//brings props of the product items to add
 const CardItemList = ({image,title,price, stock, id}) => {
-  const { addProductToCart } = useContext(CartContext)
-  const [showButton, setShowButton] = useState(false)
-  const [quantity, setQuantity] = useState(1);
+  //Get the add to cart function from the context
+  const { addProductToCart } = useContext(CartContext);
+  //Constant to set the amount to add
+  const quantity = (1);
   
     return(   
       <div className='visible'>     
@@ -36,9 +37,7 @@ const CardItemList = ({image,title,price, stock, id}) => {
                 </Typography>
             </div>            
             <div>
-            {!showButton ?
-              <ItemCount quantity = { quantity } refreshQuantity = {setQuantity} setShowButton={setShowButton}  stock={stock} title={title}/>
-              : <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={() => addProductToCart({ image, title, price, stock, id, quantity }) }>Terminar compra</Button> }
+              <Button fullWidth variant ="contained" id="colorBtnAddToCart" onClick={() => addProductToCart({ image, title, price, stock, id, quantity }) }>Comprar</Button> 
             </div>            
           </CardContent>
         </CardActionArea>

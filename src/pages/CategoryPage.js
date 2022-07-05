@@ -5,6 +5,7 @@ import { collection, getDocs } from "firebase/firestore";
 import db from "../utils/firebaseConfig";
 
 const CategoryPage = () =>{
+    //Call matched with the category via useParams
     const [itemProduct, setWelders] = useState([]); 
     const {category} = useParams();  
     
@@ -14,9 +15,8 @@ const CategoryPage = () =>{
         
         getWelderProducts()
         .then((response) => {
-            //*  
+             
             setWelders([]);
-            //*
             filterByCategory(response)           
         })
 

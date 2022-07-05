@@ -2,7 +2,14 @@
     text-align: center;
     margin-top: 4rem;
     margin-bottom: 1rem;
+    h6{
+        margin-top: 1.2rem;
+    }
 }
+#title-cart-account{
+    padding-left: 8%;
+}
+
 .cart-empty-items{
     margin-bottom: 3rem;
     .button-items{
@@ -21,7 +28,6 @@
 }
 
 .cart-list-products{
-
     img{
         width: 60px
     }
@@ -33,5 +39,36 @@
     button{
         margin-bottom: 1rem;
         
+    }
+}
+@media (min-width: 900px){
+#cart-grid-account{
+    padding-left: 11%;
+    }
+}
+
+@media (max-width: 1050px){
+    #media-acount-cart{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 900px){
+    #margin-cart-account{
+        padding-left: 0px ;
+        padding-right: 0px;
+        
+    }
+   #media-acount-cart{
+    padding-top: 5px;
+   }
+    #media-items-acounts{
+        width: 100%;
+        margin-left: 0px;
+        #cart-grid-account{
+            padding-left: 16px;
+            padding-right: 16px;
+        }
     }
 }

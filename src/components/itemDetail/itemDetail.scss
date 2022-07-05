@@ -1,5 +1,6 @@
 .single-product{
     margin-bottom: 4rem;
+    margin-top: 2rem;
     img{
         width: 95%;
     }
@@ -19,7 +20,21 @@
 .item-card-margin{
     margin-top: 2rem;
     margin-left: 0px;
+    .btn-margin-detail{
+        margin-bottom: 1rem;
+    }
 }
 .category-item{
     margin-left: 7.6%;
+}
+#btn-detail{
+    color: #ea5127;
+}
+
+@media (max-width: 360px){
+    #img-secondary-media{
+        img{
+            width: 4rem ;
+        }
+    }
 }
