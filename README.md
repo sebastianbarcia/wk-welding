@@ -20,7 +20,7 @@ https://mui.com/
 
 🖌️ Images and vectors were worked with illustrator and photoshop.
 
-### TO START PROGRAM
+## TO START PROGRAM
 
 ### Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/sebastianbarcia/wk-welding.git).
@@ -54,10 +54,10 @@ git add all / git add .
 git commit -m "Nuevo mensaje"
 git push https://github.com/sebastianbarcia/wk-welding.git
 
-#### TESTS WEB PAGE 
+## TESTS WEB PAGE 
 The site was tested with different people to measure its usability and user experience.
 
-###### CONTRIBUTORS
+## CONTRIBUTORS
 
 Licence 📄
 This project is licensed under the Sebastian Barcia License and was created for use in Coderhouse's reactJS course
@@ -67,7 +67,7 @@ Muchas gracias a mi tutor de la clase Christian Chavez y al profesor Christian O
 
 ⌨️ with ❤️ by Sebastian Barcia 😊
 
-###### ABOUT ME
+## ABOUT ME
 
 const sebastianbarcia = {
   pronouns: "he" | "him",
