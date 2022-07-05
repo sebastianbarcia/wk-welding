@@ -20,7 +20,7 @@ const FormOrder = () =>{
     //Function to open modal if input checks are met
     const handleOpen = () => {
        
-        setMailVerify(/\S+@\S+/.test(formValue.mail))
+        setMailVerify(/\S+@\S+/.test(formValue.mail));
         setNameCheck(formValue.name.length < 3);
         setPhoneCheck(formValue.phone.length < 5);
         setAdressCheck(formValue.address.length < 4);

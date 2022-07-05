@@ -67,7 +67,7 @@ const Home = () => {
     return(
         <>
             <div style={styleHomeFront} className='frontpage-home'  >
-                <Typography variant='h2' component={"h3"}>Nueva linea de soldadoras de última generación</Typography>
+                <Typography variant='h2' component={"h3"}>Sube de nivel con la nueva linea de soldadoras</Typography>
                 <img src='./soldadoras-category-list.png'></img>
                 <Button variant='contained' color='warning' onClick={btnCall}>Descúbrelas</Button>
             </div>
