@@ -6,7 +6,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { useNavigate } from 'react-router-dom';
-
+import { Typography } from '@mui/material';
+import './modal.scss'
 //Modal to finish purchase process
 //Props to enter information in it
 export default function ModalCheckOut({ productsOrders, open , data , idClient }) {
@@ -25,18 +26,18 @@ export default function ModalCheckOut({ productsOrders, open , data , idClient }
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          <p>Tu pedido esta en camino {data.name}!</p> 
+          <Typography variant='h5'>Gracias por tu compra {data.name}!</Typography> 
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            <p>Llevaremos los siguientes productos:</p>
+            <Typography variant='subtitle1'>Llevaremos los siguientes productos:</Typography>
           {productsOrders.map((item) => {
           return(
-            <p>{item.title}</p>
+            <Typography variant='body1' className='item-modal-order'>{item.title}</Typography>
           )
           })}
-          <p>A tu direccion en {data.address}, {data.city}, {data.country}.</p>
-          <p>El numero de identificación de tu pedido es el {idClient}</p>
+          <Typography className='item-adress-order'>A tu direccion en {data.address}, {data.city}, {data.country}.</Typography>
+          <Typography>El numero de identificación de tu pedido es el <span className='item-modal-order'>{idClient}</span> </Typography>
           </DialogContentText>
         </DialogContent>
         <DialogActions>                 

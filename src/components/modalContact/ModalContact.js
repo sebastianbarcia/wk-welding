@@ -6,6 +6,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { useNavigate } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 export default function ModalContact({ open , data , idClient }) {
     
@@ -23,12 +24,12 @@ export default function ModalContact({ open , data , idClient }) {
           aria-describedby="alert-dialog-description"
         >
           <DialogTitle id="alert-dialog-title">
-            <p>Hemos recibido tu mensaje, {data.name}!</p> 
+            <Typography variant='h5'>Hemos recibido tu mensaje, {data.name}!</Typography> 
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-            <p>Te contestaremos a tu dirección de correo electrónico: {data.mail}.</p>
-            <p>Toma nota de tu numero de identificación de este mensaje: {idClient}</p>
+            <Typography  variant='subtitle1'>Te contestaremos a tu dirección de correo electrónico: <span className='item-modal-order'>{data.mail}</span>.</Typography>
+            <Typography  variant='subtitle1'>Por favor, toma nota del numero de identificación de este mensaje:<span className='item-modal-order'> {idClient}</span></Typography>
             </DialogContentText>
           </DialogContent>
           <DialogActions>                 
