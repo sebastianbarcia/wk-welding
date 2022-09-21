@@ -27,7 +27,7 @@ Is open source code for modify to improve the proyect.
 
 ### Install
 You can Install de repository from here: 
-`https://github.com/sebastianbarcia/wk-welding.git`
+`https://github.com/sebastianbarcia/wk-welding.git`\
 Open in branch "final_project-WK"
 
 ### Node modules    
