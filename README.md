@@ -85,7 +85,7 @@ const sebastianbarcia = {
 
 - 💬 Ask me about **React JS, Javascript, HTML5, CSS3**
 
-- 📜 My CV (PDF/CV-sebastian_barcia.pdf)
+- 📜 My CV [PDF/CV-sebastian_barcia.pdf]
 
 - 📫 How to reach me **sebastianbarcia@hotmail.com**
 
