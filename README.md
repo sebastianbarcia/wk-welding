@@ -80,7 +80,6 @@ const sebastianbarcia = {
   tools: [React, Bootstrap, MUI, Git, Sass, Adobe XD, Figma, Illustrator, Photoshop],
 }
 
-- 👯 participate in the creation of the website [restaurant.pe](https://restaurant.rowe.mx/)
 
 - 👨‍💻 All of my projects are available at [https://github.com/sebastianbarcia](https://github.com/sebastianbarcia)
 
