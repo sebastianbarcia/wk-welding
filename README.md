@@ -1,3 +1,7 @@
+<div align="center">
+<img width="300" src="https://user-images.githubusercontent.com/93622276/193776693-e56091db-27ec-44b9-ab70-6e850b4db83a.svg" alt="wk_logo-color">
+</div>
+
 # ABOUT THE PROJECT
 🌐 WK WELDING E-COMMERCE WEB PAGE
 This is the page of WK Welding (a company specialized in welding), where users can get to know the company, buy its products and contact it.
